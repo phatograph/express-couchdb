@@ -1,0 +1,7 @@
+li
+  | #{user.value.name}
+  - if (user.value.position)
+    | (#{user.value.position})
+  - else
+    | (-)
+  | <a href='/user/#{user.id}'>view</a> / <a href='/user/#{user.id}/edit'>edit</a> / <a href='/user/#{user.id}/delete'>delete</a>

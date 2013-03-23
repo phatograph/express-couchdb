@@ -1,0 +1,12 @@
+h1 Edit #{user.name}
+form(action='/user/#{user._id}/edit', method='post')
+  p
+    input(type='text', value='#{user.name}', name='name')
+    label &nbsp;name
+  p
+    input(type='text', value='#{user.position ? user.position : ''}', name='position')
+    label &nbsp;position
+  p
+    | <input type='hidden' value='put' name ='_method' />
+    | <input type='hidden' value='#{user._rev}' name ='_rev' />
+    | <input type='submit' value='ok' /> <a href='/users'>cancel</a>

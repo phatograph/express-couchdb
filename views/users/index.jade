@@ -1,0 +1,8 @@
+h1 Users
+- if (users && users.length)
+  ul#users
+    != partial('user', users)
+- else
+  p empty!
+p
+  | <a href="/">home</a> | <a href="/users/add">add new user</a>
